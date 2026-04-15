@@ -5,6 +5,24 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Hello World!')));
+    return Scaffold(
+      appBar: AppBar(title: Text('data')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Placeholder(child: Text('Controls')),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 12,
+              itemBuilder: (context, index) => Placeholder(child: Text('Form')),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('data'),
+      ),
+    );
   }
 }
