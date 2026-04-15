@@ -1,20 +1,13 @@
-import 'package:flutter/material.dart';
+import 'dart:developer';
 
-void main() {
-  runApp(const MainApp());
+import 'package:flutter/material.dart';
+import 'package:telegram_forms_bot_app/domain/app/main_app.dart';
+
+Future<void> setup() async {
+  log('setup app', name: 'main-procces');
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+void main() async {
+  await setup();
+  runApp(const MainApp());
 }
